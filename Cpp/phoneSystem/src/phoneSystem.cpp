@@ -81,6 +81,7 @@ void addPerson(Addressbooks *abs)
         abs->m_Size++;
         cout << "添加成功" << endl;
         getchar();
+    sleep(3);
         system("clear");
     }
 }
@@ -104,6 +105,7 @@ void showPerson(Addressbooks *abs)
         }
     }
     getchar();
+    sleep(3);
     system("clear");
 }
 // 判断是否存在查询的人员，存在返回在数组中索引位置，不存在返回-1
@@ -139,6 +141,7 @@ void deletePerson(Addressbooks * abs)
         cout << "查无此人" << endl;
     }
     getchar();
+    sleep(3);
     system("clear");
 }
 // 4、查找指定联系人信息
@@ -161,6 +164,7 @@ void findPerson(Addressbooks * abs)
         cout << "查无此人" << endl;
     }
     getchar();
+    sleep(3);
     system("clear");
 }
 //5、修改指定联系人信息
@@ -216,6 +220,7 @@ void modifyPerson(Addressbooks * abs)
         cout << "查无此人" << endl;
     }
     getchar();
+    sleep(3);
     system("clear");
 }
 // 6、清空所有联系人
@@ -224,6 +229,7 @@ void cleanPerson(Addressbooks * abs)
     abs->m_Size = 0;
     cout << "通讯录已清空" << endl;
     getchar();
+    sleep(3);
     system("clear");
 }
 int main()
@@ -267,5 +273,6 @@ int main()
         }
     }
     getchar();
+    sleep(3);
     return 0;
 }
