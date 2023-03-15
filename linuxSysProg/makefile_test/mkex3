@@ -1,0 +1,16 @@
+src = $(wildcard ./*.cpp)
+obj = $(patsubst %.cpp, %.o, $(src))
+ALL:a.out
+a.out: $(obj)
+	g++ $^ -o $@
+
+hello.o:hello.cpp
+	g++ -c $< -o $@
+add.o:add.cpp
+	g++ -c $< -o $@
+sub.o:sub.cpp
+	g++ -c $< -o $@
+div1.o:div1.cpp
+	g++ -c $< -o $@
+clean:
+	-rm -rf $(obj) a.out
