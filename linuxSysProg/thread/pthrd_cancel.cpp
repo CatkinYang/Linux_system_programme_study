@@ -4,6 +4,7 @@
  > Created Time: Wed Mar  1 18:48:19 2023
  ************************************************************************/
 
+#include <cstdio>
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -41,6 +42,7 @@ int main(int argc, char* argv[])
         fprintf(stderr,"pthread_cancel error:%s\n",strerror(ret));
         exit(1);
     }
+    printf("pthread will be cancel");
     while(1);
 
     pthread_exit((void*)0);
