@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
         efd = epoll_create(10);
 
         event.events = EPOLLIN | EPOLLET;     // ET 边沿触发
-        //event.events = EPOLLIN;                 // LT 水平触发 (默认)
+       // event.events = EPOLLIN;                 // LT 水平触发 (默认)
         event.data.fd = pfd[0];
         epoll_ctl(efd, EPOLL_CTL_ADD, pfd[0], &event);
 

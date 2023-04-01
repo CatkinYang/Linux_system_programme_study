@@ -36,8 +36,8 @@ int main(void)
     int res, len;
 
     efd = epoll_create(10);
-    event.events = EPOLLIN | EPOLLET;     /* ET 边沿触发 */
-    //event.events = EPOLLIN;                 /* 默认 LT 水平触发 */
+    //event.events = EPOLLIN | EPOLLET;     /* ET 边沿触发 */
+    event.events = EPOLLIN;                 /* 默认 LT 水平触发 */
 
     printf("Accepting connections ...\n");
 
